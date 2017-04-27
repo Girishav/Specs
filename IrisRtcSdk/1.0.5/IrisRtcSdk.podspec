@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IrisRtcSdk'
-  s.version          = '3.0.0.11'
+  s.version          = '1.0.5'
   s.summary          = 'iOS SDK which leverages Comcast Iris Platform'
 
 # This description is used to generate tags and improve search results.
@@ -41,7 +41,7 @@ iOS SDK which leverages Comcast Iris Platform.
     #lib.preserve_paths = 'webrtc/libs/libwebrtc.a'
     lib.vendored_libraries = 'IrisRtcSdk/webrtc/libs/libwebrtc.a' ,  'IrisRtcSdk/loggerSdk/libs/libwebrtc-logger-sdk.a', 'IrisRtcSdk/XMPP/XMPPFramework/Vendor/libidn/libidn.a'
     lib.libraries = 'webrtc', 'webrtc-logger-sdk'
-    lib.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/IrisRtcSdk/loggerSdk/header "  + "${PODS_ROOT}/#{s.name}/IrisRtcSdk/webrtc/header " + "$(SDKROOT)/usr/include/libxml2", 'LIBRARY_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/IrisRtcSdk/loggerSdk/libs "  + "${PODS_ROOT}/#{s.name}/IrisRtcSdk/webrtc/libs " + "${PODS_ROOT}/#{s.name}/IrisRtcSdk/XMPP/XMPPFramework/Vendor/libidn/", 'FRAMEWORK_SEARCH_PATHS' => "$(PLATFORM_DIR)/Developer/Library/Frameworks", 'OTHER_LDFLAGS' => "-ObjC", 'ENABLE_BITCODE' => 'YES'}
+    lib.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/IrisRtcSdk/loggerSdk/header "  + "${PODS_ROOT}/#{s.name}/IrisRtcSdk/webrtc/header " + "$(SDKROOT)/usr/include/libxml2", 'LIBRARY_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/IrisRtcSdk/loggerSdk/libs "  + "${PODS_ROOT}/#{s.name}/IrisRtcSdk/webrtc/libs " + "${PODS_ROOT}/#{s.name}/IrisRtcSdk/XMPP/XMPPFramework/Vendor/libidn/", 'FRAMEWORK_SEARCH_PATHS' => "$(PLATFORM_DIR)/Developer/Library/Frameworks", 'OTHER_LDFLAGS' => "-ObjC", 'ENABLE_BITCODE' => 'NO'}
   end
   # s.dependency 'AFNetworking', '~> 2.3'
 end
